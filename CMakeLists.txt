@@ -4,4 +4,14 @@ PROJECT(learn_algorithm_programmers)
 
 SET(CMAKE_CXX_STANDARD 17)
 
-ADD_EXECUTABLE(learn_algorithm_programmers main.cpp)
+INCLUDE(FetchContent)
+
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG        v3.0.1
+)
+
+FetchContent_MakeAvailable(Catch2)
+
+ADD_SUBDIRECTORY(42576)
