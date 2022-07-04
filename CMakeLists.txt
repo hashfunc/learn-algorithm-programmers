@@ -15,3 +15,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 ADD_SUBDIRECTORY(42576)
+ADD_SUBDIRECTORY(42577)
