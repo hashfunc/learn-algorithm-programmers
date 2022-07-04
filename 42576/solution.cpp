@@ -6,15 +6,7 @@ std::string solution(std::vector<std::string> participant, std::vector<std::stri
 
 	for (const auto& key: completion)
 	{
-		auto iter = completion_map.find(key);
-		if (iter == completion_map.end())
-		{
-			completion_map[key] = 1;
-		}
-		else
-		{
-			completion_map[key] = iter->second + 1;
-		}
+		completion_map[key] += 1;
 	}
 
 	for (const auto& key: participant)
@@ -24,7 +16,7 @@ std::string solution(std::vector<std::string> participant, std::vector<std::stri
 		{
 			return key;
 		}
-		completion_map[key] = iter->second - 1;
+		completion_map[key] -= 1;
 	}
 
 	throw std::invalid_argument("There is no answer");
