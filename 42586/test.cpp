@@ -2,7 +2,7 @@
 
 #include "solution.h"
 
-TEST_CASE("42587")
+TEST_CASE("42586")
 {
 	SECTION("CASE_1")
 	{
